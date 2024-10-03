@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <style>
+        /* Basic styling for the navbar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar .right {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'appointmenthomepage' %}">Home</a>
+        <a href="{% url 'Aboutpage' %}">About</a>
+        <a href="{% url 'Contactpage' %}">Contact</a>
+         <a href="{% url 'bookingpage' %}">Book Appointment</a>
+        <a href="#login" class="right">Login</a>
+        <a href="#register" class="right">Register</a>
+    </div>
+
+    <div id="about-section">
+        <h2>About Us</h2>
+        <p>Welcome to our Appointment application. We aim to provide the best service for managing your appointments efficiently.</p>
+        <p>Our team is dedicated to ensuring that you have a seamless experience while using our platform.</p>
+        <p>Contact us for more information or if you have any questions.</p>
+    </div>
+</body>
+</html>
