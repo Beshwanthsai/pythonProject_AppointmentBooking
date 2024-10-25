@@ -8,15 +8,18 @@
         .navbar {
             overflow: hidden;
             background-color: #333;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .navbar a {
-            float: left;
             display: block;
             color: #f2f2f2;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            flex: 1;
         }
 
         .navbar a:hover {
@@ -25,7 +28,42 @@
         }
 
         .navbar .right {
-            float: right;
+            order: 1;
+        }
+
+        @media (max-width: 600px) {
+            .navbar a {
+                flex: 100%;
+                text-align: left;
+            }
+
+            .navbar .right {
+                order: 2;
+            }
+        }
+
+        #about-section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #about-section h2 {
+            font-size: 2em;
+        }
+
+        #about-section p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            #about-section h2 {
+                font-size: 1.5em;
+            }
+
+            #about-section p {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -34,7 +72,7 @@
         <a href="{% url 'appointmenthomepage' %}">Home</a>
         <a href="{% url 'Aboutpage' %}">About</a>
         <a href="{% url 'Contactpage' %}">Contact</a>
-         <a href="{% url 'bookingpage' %}">Book Appointment</a>
+        <a href="{% url 'bookingpage' %}">Book Appointment</a>
         <a href="#login" class="right">Login</a>
         <a href="#register" class="right">Register</a>
     </div>
